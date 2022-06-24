@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="icon" href="./Image/logo vector.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <title>
+        Blessingshop Login
+    </title>
+</head>
+<body>
+        <div class="container">
+            <img src="./Image/users icon.png" alt="user">
+            <h1> Login Form </h1>
+            <form name="f1" onsubmit = "return validation()" method="POST" action="php/login.php">
+               <p>Username</p>   
+                <input type="text" name="username" id="username" placeholder="Enter Username"value="">
+                <p>Password</p>   
+                <input type="password" name="password" id="password" placeholder="Enter Password" value="" > 
+                <input type="submit" value="login">
+                 Forget Your <a href="#" > Password? </a>
+                <a href="register.html" class="frget">Create Account</a>  
+            </form>
+               
+        </div>   
+       
+    </form> 
+    <script>  
+        function validation()  
+        {  
+            var id=document.f1.username.value;  
+            var ps=document.f1.password.value;  
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else  
+            {  
+                if(id.length=="") {  
+                    alert("User Name is empty");  
+                    return false;  
+                }   
+                if (ps.length=="") {  
+                alert("Password field is empty");  
+                return false;  
+                }  
+            }                             
+        }  
+    </script>      
+</body>
+</html>
